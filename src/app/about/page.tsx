@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'About | Tiffany Cook Photography',
-  description: 'Learn more about Tiffany Cook Photography - the story, the passion, and the commitment to capturing your most precious moments.',
+  description: 'Meet Tiffany Cook - equine photographer specializing in Arabian horses. Based in Central Texas, capturing authentic, natural images since 2010.',
 };
 
 export default function AboutPage() {
@@ -13,7 +13,7 @@ export default function AboutPage() {
       <section className="py-24 px-6 bg-card">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-light tracking-[0.1em] text-foreground mb-6">
-            ABOUT
+            MEET TIFFANY
           </h1>
           <div className="w-16 h-px bg-accent mx-auto" />
         </div>
@@ -22,59 +22,82 @@ export default function AboutPage() {
       {/* Main Content */}
       <section className="py-24 px-6 bg-background">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="grid md:grid-cols-2 gap-16 items-start">
             {/* Photo placeholder */}
-            <div className="aspect-[3/4] bg-card border border-border flex items-center justify-center">
-              <span className="text-muted">Photographer Portrait</span>
+            <div className="aspect-[3/4] bg-card border border-border flex items-center justify-center sticky top-24">
+              <span className="text-muted">Tiffany Portrait</span>
             </div>
 
             {/* Bio */}
             <div>
               <h2 className="text-2xl md:text-3xl font-light tracking-wider text-foreground mb-6">
-                Hello, I&apos;m Tiffany
+                Equine Photographer
               </h2>
-              <div className="w-12 h-px bg-accent mb-8" />
+              <p className="text-accent text-sm tracking-wider mb-8">
+                CENTRAL TEXAS • SINCE 2010
+              </p>
 
               <div className="space-y-6 text-muted leading-relaxed">
                 <p>
-                  Welcome to my corner of the creative world. I&apos;m a professional photographer
-                  with a passion for capturing life&apos;s most meaningful moments. Every click of
-                  my camera is driven by a desire to freeze time and preserve memories that will
-                  be treasured for generations.
+                  I specialize in equine photography with a focus on Arabian horses,
+                  working with owners who value authenticity and want to showcase their
+                  horses just as they are—naturally and honestly.
                 </p>
                 <p>
-                  My journey into photography began with a simple fascination for the way light
-                  and shadow could tell a story. Over the years, that fascination has evolved
-                  into a deep commitment to my craft and to my clients.
+                  My approach is simple: bright, natural light, real environments, and
+                  true-to-life images that reflect the horse standing in front of my lens.
+                  I do not alter conformation or digitally reshape horses. What you see
+                  is what you get.
                 </p>
                 <p>
-                  I specialize in portrait, family, maternity, and commercial photography,
-                  bringing a distinctive eye for detail and a warm, relaxed approach to every
-                  session. My goal is to make you feel comfortable and confident, allowing your
-                  authentic self to shine through.
+                  My goal is to create a realistic and respectful representation of each
+                  horse, capturing their presence, structure, and personality without
+                  exaggeration or manipulation. I believe great equine photography should
+                  honor the horse, not change it.
                 </p>
-                <p>
-                  When I&apos;m not behind the camera, you&apos;ll find me exploring new locations,
-                  spending time with loved ones, and continuously learning new techniques to
-                  bring fresh perspectives to my work.
-                </p>
-              </div>
-
-              <div className="mt-8">
-                <Link
-                  href="/contact"
-                  className="inline-block px-6 py-2 border border-accent text-accent text-sm tracking-wider hover:bg-accent hover:text-background transition-all duration-300"
-                >
-                  LET&apos;S CONNECT
-                </Link>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Philosophy */}
+      {/* Story Section */}
       <section className="py-24 px-6 bg-card">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-light tracking-[0.1em] text-foreground mb-4">
+              MY STORY
+            </h2>
+            <div className="w-16 h-px bg-accent mx-auto" />
+          </div>
+
+          <div className="space-y-6 text-muted leading-relaxed">
+            <p>
+              My journey into photography started long before I ever picked up a camera
+              professionally. I&apos;ve been involved with horses for over 30 years, and that
+              experience shapes the way I see and photograph them.
+            </p>
+            <p>
+              My love for photography was inspired by my grandmother, who studied photography
+              in college and worked as a journalist photographer before I was born. She
+              introduced me to both horses and photography, and growing up, she was always
+              behind the camera—creating striking images in the days long before Photoshop existed.
+            </p>
+            <p>
+              Her influence is a big part of why authenticity matters so much to me today.
+            </p>
+            <p>
+              I&apos;ve been photographing horses professionally since 2010 and am based in
+              Central Texas. Whether photographing a single horse or an entire program, I
+              strive to provide clients with images that feel natural, honest, and
+              timeless—true representations they can stand behind with confidence.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Philosophy */}
+      <section className="py-24 px-6 bg-background">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-light tracking-[0.1em] text-foreground mb-4">
@@ -92,8 +115,9 @@ export default function AboutPage() {
                 AUTHENTICITY
               </h3>
               <p className="text-sm text-muted leading-relaxed">
-                I believe the most beautiful images come from genuine moments.
-                I focus on capturing you as you truly are.
+                No digital reshaping. No altered conformation.
+                What you see is what you get—honest images that
+                truly represent your horse.
               </p>
             </div>
 
@@ -102,11 +126,12 @@ export default function AboutPage() {
                 <span className="text-accent text-2xl font-light">02</span>
               </div>
               <h3 className="text-lg font-light tracking-wider text-foreground mb-3">
-                CONNECTION
+                NATURAL LIGHT
               </h3>
               <p className="text-sm text-muted leading-relaxed">
-                Great photos start with trust. I take time to understand your
-                story and create a comfortable environment.
+                Bright, natural lighting in real environments.
+                No artificial setups—just beautiful light that
+                showcases your horse naturally.
               </p>
             </div>
 
@@ -115,12 +140,33 @@ export default function AboutPage() {
                 <span className="text-accent text-2xl font-light">03</span>
               </div>
               <h3 className="text-lg font-light tracking-wider text-foreground mb-3">
-                ARTISTRY
+                RESPECT
               </h3>
               <p className="text-sm text-muted leading-relaxed">
-                Each image is thoughtfully composed and carefully edited to
-                create timeless photographs you&apos;ll love.
+                Great equine photography should honor the horse,
+                not change it. I capture presence, structure, and
+                personality with integrity.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Highlights */}
+      <section className="py-24 px-6 bg-card">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid grid-cols-3 gap-8 text-center">
+            <div>
+              <p className="text-4xl md:text-5xl font-light text-accent mb-2">30+</p>
+              <p className="text-sm text-muted tracking-wider">YEARS WITH HORSES</p>
+            </div>
+            <div>
+              <p className="text-4xl md:text-5xl font-light text-accent mb-2">15+</p>
+              <p className="text-sm text-muted tracking-wider">YEARS PROFESSIONAL</p>
+            </div>
+            <div>
+              <p className="text-4xl md:text-5xl font-light text-accent mb-2">TX</p>
+              <p className="text-sm text-muted tracking-wider">CENTRAL TEXAS</p>
             </div>
           </div>
         </div>
@@ -133,7 +179,7 @@ export default function AboutPage() {
             LET&apos;S WORK TOGETHER
           </h2>
           <p className="text-muted font-light leading-relaxed mb-8">
-            I&apos;d love to hear about your story and help capture your precious moments.
+            Ready to capture your Arabian or equine program with authenticity and care?
           </p>
           <Link
             href="/contact"
