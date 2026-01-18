@@ -23,6 +23,21 @@ const services = [
   },
 ];
 
+const testimonials = [
+  {
+    quote: "Working with Tiffany was an absolute pleasure. Her passion for equine photography is contagious, and it truly reflects in her work. I am thrilled with the stunning images she captured and will treasure them for years to come.",
+    name: "Jason",
+  },
+  {
+    quote: "Tiffany's ability to capture the true spirit of the horses is unmatched. Her dedication to her craft is evident in every photograph she takes. I couldn't be happier with the photos she has taken of my beloved horses.",
+    name: "Ryan & Michelle",
+  },
+  {
+    quote: "We were blown away by Tiffany's professionalism and the way she made us feel at ease during the photoshoot. The results exceeded our expectations, and we highly recommend her to anyone looking for exceptional equine photography.",
+    name: "Terry",
+  },
+];
+
 export default function Home() {
   return (
     <div className="page-transition">
@@ -138,8 +153,39 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Call to Action */}
+      {/* Testimonials */}
       <section className="py-24 px-6 bg-background">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-light tracking-[0.1em] text-foreground mb-4">
+              WHAT CLIENTS ARE SAYING
+            </h2>
+            <div className="w-16 h-px bg-accent mx-auto" />
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div
+                key={index}
+                className="p-8 bg-card border border-border"
+              >
+                <svg className="w-8 h-8 text-accent mb-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                </svg>
+                <p className="text-muted leading-relaxed mb-6 italic">
+                  &ldquo;{testimonial.quote}&rdquo;
+                </p>
+                <p className="text-accent font-light tracking-wider">
+                  — {testimonial.name}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-24 px-6 bg-card">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-light tracking-[0.1em] text-foreground mb-6">
             LET&apos;S CREATE SOMETHING BEAUTIFUL
